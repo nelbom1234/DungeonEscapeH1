@@ -7,6 +7,7 @@ class Map {
 
     static char[][][] rooms = [room1, room2, room3];
 
+    //draw a room based on number 
     public static void Draw(int roomNum) {
         foreach (char[] line in rooms[roomNum]) {
             foreach (char c in line) {
@@ -16,14 +17,17 @@ class Map {
         }
     }
 
+    //return the character at a square position in a room
     public static char Square(int roomNum, int x, int y) {
         return rooms[roomNum][y][x];
     }
 
+    //remove the square at a position in a room and replace it with standard floor '.'
     public static void RemoveSquare(int roomNum, int x, int y) {
         rooms[roomNum][y][x] = '.';
     }
 
+    // reset the maps to their starting positions
     public static void Restart() {
         room1 = [
             ['X','X','X','X','X','X','X','X','X','X','X','X','X','X','X'],

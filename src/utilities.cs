@@ -1,6 +1,7 @@
 namespace DungeonEscapeH1;
 
 static class Utilities {
+    //receive input from the user, check it is valid and return it
     public static string RecieveInput(string request) {
         while (true) {
             Console.WriteLine(request);

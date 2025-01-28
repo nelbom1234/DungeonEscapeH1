@@ -2,30 +2,31 @@
 
 class Program
 {
-    static int roomNum;
-    static string info;
-    static bool trapped;
-    static bool finish = false;
-
+    static int roomNum; //currently active room
+    static string info; //info message to the player
+    static bool trapped; // have we hit a trap
+    static bool finish = false; // should we exit the game
     static void Main(string[] args)
     {
-        Restart();
+        Restart(); // initial setup of variables
         while (!finish) {
-            Draw(roomNum);
-            if (trapped) {
+            Draw(roomNum); // show 
+            if (trapped) { //if we've hit a trap, restart
                 Restart();
                 Console.ReadKey();
                 continue;
             }
-            string move = Utilities.RecieveInput("Vil du rykke (o)p, (n)ed, (h)øjre eller (v)enstre?");
-            char square = ParseMove(move);
-            ParseSquare(square);
+            string move = Utilities.RecieveInput("Vil du rykke (o)p, (n)ed, (h)øjre eller (v)enstre?"); //we only check the first character, so we highlight those characters in the message
+            char square = ParseMove(move); // run the move logic and save the square we stepped on
+            ParseSquare(square); // run the logic for which square we hit
         }
+        //outside of the while loop, draw the room once again to display the last info message and then exit after button press
         Draw(roomNum);
         Console.WriteLine("tryk på en vilkårlig tast for at lukke spillet");
         Console.ReadKey();
     }
 
+    // draw the various things that need drawing
     static void Draw(int roomNum) {
         Console.Clear();
         Map.Draw(roomNum);
@@ -35,6 +36,7 @@ class Program
         Console.WriteLine(info);
     }
 
+    // guide for the player as to which squares mean what and how many keys they have
     static void DrawGuide() {
         Console.SetCursorPosition(32, 0);
         Console.Write("P: dig");
@@ -54,21 +56,22 @@ class Program
         Console.Write($"Nøgler: {Player.GetKeys()}");
     }
 
+    // method to parse move commands
     static char ParseMove(string move) {
-        char first = move != "" ? move[0] : ' ';
+        char first = move != "" ? move[0] : ' '; // set the move to a space in case the input is just an empty string to avoid an exception
         switch (first) {
-            case 'o':
+            case 'o': // up
                 return Player.Move(roomNum, 0, -1);
-            case 'n':
+            case 'n': // down
                 return Player.Move(roomNum, 0, 1);
-            case 'h':
+            case 'h': // right
                 return Player.Move(roomNum, 1, 0);
-            case 'v':
+            case 'v': // left
                 return Player.Move(roomNum, -1, 0);
-            case 'q':
+            case 'q': //exit the game
                 finish = true;
                 return ' ';
-            default:
+            default: //invalid input
                 Console.WriteLine(
                     "Det er ikke en gyldig kommando\n" +
                     "tryk på en vilkårlig tast for at prøve igen" 
@@ -78,33 +81,34 @@ class Program
         }
     }
 
+    //parse the info message based on which square we stepped on
     static void ParseSquare(char square) {
         switch(square) {
-            case 'X':
+            case 'X': //wall
                 info = "du gik ind i en væg";
                 break;
-            case '#':
+            case '#': //trap
                 info = "du trådte i en fælde. tryk på en vilkårlig tast for at genstarte spillet";
                 trapped = true;
                 break;
-            case 'K': 
+            case 'K': //key
                 info = "Du samlede en nøgle op";
                 break;
-            case 'd':
+            case 'd': //door, but we don't have a key
                 info = "Døren er låst";
                 break;
-            case 'D':
+            case 'D': // door and we have a key
                 info = "du låste døren op";
                 break;
-            case 'O':
+            case 'O': //stairs up
                 info = "du gik op af trappen";
                 roomNum++;
                 break;
-            case 'N':
+            case 'N': // stairs down
                 info = "du gik ned af trappen";
                 roomNum--;
                 break;
-            case 'G':
+            case 'G': //final goal
                 info = "DU NÅEDE MÅLET!!! godt spillet";
                 finish = true;
                 break;
@@ -114,6 +118,7 @@ class Program
         }
     }
 
+    //method to reset all the values to their base values and thus start the game over
     static void Restart() {
         roomNum = 0;
         info = "Velkommen til spillet";
