@@ -8,4 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DungeonEscapeH1
-build_property.ProjectDir = c:\Users\Nelbom\Documents\GitHub\DungeonEscapeH1\
+build_property.ProjectDir = C:\Users\Nelbom\Documents\GitHub\DungeonEscapeH1\src\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -1,0 +1,15 @@
+C:\Users\Nelbom\Documents\GitHub\DungeonEscapeH1\src\obj\Debug\net8.0\DungeonEscapeH1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nelbom\Documents\GitHub\DungeonEscapeH1\src\obj\Debug\net8.0\DungeonEscapeH1.AssemblyInfoInputs.cache
+C:\Users\Nelbom\Documents\GitHub\DungeonEscapeH1\src\obj\Debug\net8.0\DungeonEscapeH1.AssemblyInfo.cs
+C:\Users\Nelbom\Documents\GitHub\DungeonEscapeH1\src\obj\Debug\net8.0\DungeonEscapeH1.csproj.CoreCompileInputs.cache
+C:\Users\Nelbom\Documents\GitHub\DungeonEscapeH1\src\obj\Debug\net8.0\DungeonEscapeH1.sourcelink.json
+C:\Users\Nelbom\Documents\GitHub\DungeonEscapeH1\src\bin\Debug\net8.0\DungeonEscapeH1.exe
+C:\Users\Nelbom\Documents\GitHub\DungeonEscapeH1\src\bin\Debug\net8.0\DungeonEscapeH1.deps.json
+C:\Users\Nelbom\Documents\GitHub\DungeonEscapeH1\src\bin\Debug\net8.0\DungeonEscapeH1.runtimeconfig.json
+C:\Users\Nelbom\Documents\GitHub\DungeonEscapeH1\src\bin\Debug\net8.0\DungeonEscapeH1.dll
+C:\Users\Nelbom\Documents\GitHub\DungeonEscapeH1\src\bin\Debug\net8.0\DungeonEscapeH1.pdb
+C:\Users\Nelbom\Documents\GitHub\DungeonEscapeH1\src\obj\Debug\net8.0\DungeonEscapeH1.dll
+C:\Users\Nelbom\Documents\GitHub\DungeonEscapeH1\src\obj\Debug\net8.0\refint\DungeonEscapeH1.dll
+C:\Users\Nelbom\Documents\GitHub\DungeonEscapeH1\src\obj\Debug\net8.0\DungeonEscapeH1.pdb
+C:\Users\Nelbom\Documents\GitHub\DungeonEscapeH1\src\obj\Debug\net8.0\DungeonEscapeH1.genruntimeconfig.cache
+C:\Users\Nelbom\Documents\GitHub\DungeonEscapeH1\src\obj\Debug\net8.0\ref\DungeonEscapeH1.dll
