@@ -9,6 +9,7 @@ class Program
 
     static void Main(string[] args)
     {
+        Restart();
         while (!finish) {
             Draw(roomNum);
             if (trapped) {
