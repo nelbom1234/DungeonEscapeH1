@@ -7,9 +7,9 @@
     "/home/nelbom1234/Documents/H1/DungeonEscapeH1/DungeonEscapeH1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nelbom1234/Documents/H1/DungeonEscapeH1/DungeonEscapeH1.csproj",
+        "projectUniqueName": "/home/nelbom1234/Documents/H1/DungeonEscapeH1/src/DungeonEscapeH1.csproj",
         "projectName": "DungeonEscapeH1",
-        "projectPath": "/home/nelbom1234/Documents/H1/DungeonEscapeH1/DungeonEscapeH1.csproj",
+        "projectPath": "/home/nelbom1234/Documents/H1/DungeonEscapeH1/src/DungeonEscapeH1.csproj",
         "packagesPath": "/home/nelbom1234/.nuget/packages/",
         "outputPath": "/home/nelbom1234/Documents/H1/DungeonEscapeH1/obj/",
         "projectStyle": "PackageReference",
